@@ -2,21 +2,20 @@ function isFibonacci(numero) {
   let a = 0;
   let b = 1;
 
-  while (a <= numero) {
+  for (let i = 0; a <= numero; i++) {
     if (a === numero) {
+      console.log(numero + " é Fibonacci.");
       return true;
     }
-    let temp = a + b;
+    let soma = a + b;
+    //console.log(a, b);
     a = b;
-    b = temp;
+    b = soma;
   }
-
+  console.log(numero + " não é Fibonacci.");
   return false;
 }
-//EXEC:
-const numero = 21;
-if (isFibonacci(numero)) {
-  console.log(numero + " é Fibonacci.");
-} else {
-  console.log(numero + " não é Fibonacci.");
-}
+
+isFibonacci(987);
+
+isFibonacci(988);
